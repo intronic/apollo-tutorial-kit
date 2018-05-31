@@ -1,4 +1,5 @@
-import { Author, View, FortuneCookie } from './connectors';
+import { Author, FortuneCookie } from './connectors';
+// import { Author, View, FortuneCookie } from './connectors';
 
 const resolvers = {
     Query: {
@@ -28,9 +29,9 @@ const resolvers = {
         // return { id: 1, firstName: 'Hello', lastName: 'World' };
         return post.getAuthor();
       },
-      views(post) {
-        return View.findOne({ postId: post.id }).then(view => view.views);
-      }
+      // views(post) {
+      //   return View.findOne({ postId: post.id }).then(view => view.views);
+      // }
     }
   };
   
